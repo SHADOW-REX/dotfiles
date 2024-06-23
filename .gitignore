@@ -1,0 +1,73 @@
+# use custom ignores with this command:
+# GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.dotfiles.git git config --local core.excludesfile .gitignore.dotfiles
+
+# Ignore everything by default.
+
+*
+
+# bin
+!bin/
+!bin/**
+
+# bash
+!.bash_profile
+!.bashrc
+!.config/bash/
+!.config/bash/**
+
+# docs
+!docs/
+!docs/**
+
+# editorconfig
+!~/.editorconfig
+
+# fish
+!.config/fish/
+!.config/fish/*
+!.config/fish/**
+.config/fish/fish_variables
+
+# git
+!.gitignore
+!.config/git/
+!.config/git/**
+
+# iterm2
+!.config/iterm2/
+!.config/iterm2/*.json
+
+# npm
+!.config/npm/
+!.config/npm/**
+
+# nvm
+!.config/nvm/
+!.config/nvm/**
+
+# readline
+!.config/readline/
+!.config/readline/**
+
+# starship
+!.config/starship/
+!.config/starship/**
+
+# stow
+!.stow-*
+
+# tmux
+!.config/tmux/
+!.config/tmux/**
+
+# vim
+!~/.vimrc
+
+# zsh
+!.zshenv
+!.config/zsh/
+!.config/zsh/**
+
+# final
+*_history*
+.DS_Store
