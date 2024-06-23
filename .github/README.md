@@ -43,6 +43,7 @@ Certain legacy apps don't properly use .config, so anything that doesn't has a s
 - [Managing dotfiles with a bare git repo](https://www.atlassian.com/git/tutorials/dotfiles)
 - [Managing dotfiles with GNU Stow](https://venthur.de/2021-12-19-managing-dotfiles-with-stow.html)
 - [Using GNU Stow to Manage Symbolic Links for Your Dotfiles](https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/)
--[github-dotfiles]:           https://dotfiles.github.io
+
+[github-dotfiles]:           https://dotfiles.github.io
 [rsync]:                     http://man7.org/linux/man-pages/man1/rsync.1.html
 [stow]:                      https://www.gnu.org/software/stow/
