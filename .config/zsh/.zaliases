@@ -23,6 +23,10 @@ alias grep="command grep --exclude-dir={.git,.vscode}"
 # directories
 alias secrets="cd ${XDG_DATA_HOME:-~/.local/share}/secrets"
 
+# dotfiles
+alias dotty='GIT_WORK_TREE=~ GIT_DIR=~/.dotfiles'
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
 # more ways to ls
 alias ll='ls -lh'
 alias la='ls -lAh'
