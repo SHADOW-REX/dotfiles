@@ -33,6 +33,9 @@ require("lazy").setup({
     -- Treesitter for enhanced syntax highlighting
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
+    -- Log Highlighting
+    { "mtdl9/vim-log-highlighting"},
+
     -- LSP and Autocompletion
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/nvim-cmp" },
@@ -111,3 +114,5 @@ vim.g.vim_markdown_folding_disabled = 1
 -- Airline configuration
 vim.g.airline_theme = 'onedark'
 vim.g.airline_powerline_fonts = 1
+
+vim.api.nvim_set_option("clipboard", "unnamedplus")
