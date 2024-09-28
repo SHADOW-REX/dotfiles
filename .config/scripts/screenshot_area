@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+grimblast copysave area ~/Pictures/Screenshots/Screenshot_Area_$(date +%d%m%Y_%H%M%S).png || exit
+notify-send "Screenshot copied to clipboard"

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Directory containing wallpapers
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
+
+# Get a list of wallpapers in the directory
+WALLPAPERS=($(ls "$WALLPAPER_DIR"))
+
+# Get the total number of wallpapers
+TOTAL_WALLPAPERS=${#WALLPAPERS[@]}
+
+# Read the current index from a file (or start at 0)
+INDEX_FILE="$HOME/.config/scripts/.wall_index"
+if [ ! -f "$INDEX_FILE" ]; then
+    echo "0" > "$INDEX_FILE"
+fi
+CURRENT_INDEX=$(cat "$INDEX_FILE")
+
+# Calculate the next index
+NEXT_INDEX=$(( (CURRENT_INDEX + 1) % TOTAL_WALLPAPERS ))
+
+# Select the next wallpaper
+NEXT_WALLPAPER="${WALLPAPERS[$NEXT_INDEX]}"
+
+# Update the index file
+echo "$NEXT_INDEX" > "$INDEX_FILE"
+
+# Update hyprpaper configuration file
+hyprctl hyprpaper unload all
+hyprctl hyprpaper preload "$WALLPAPER_DIR/$NEXT_WALLPAPER" 
+hyprctl hyprpaper wallpaper ",$WALLPAPER_DIR/$NEXT_WALLPAPER"
