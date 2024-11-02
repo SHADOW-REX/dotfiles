@@ -3,4 +3,8 @@
 
 //@theme "/usr/share/rofi/themes/docu.rasi"
 
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+
+//@theme "/usr/share/rofi/themes/fullscreen-preview.rasi"
+
 @theme "/usr/share/rofi/themes/arthur.rasi"
