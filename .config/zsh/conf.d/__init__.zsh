@@ -19,6 +19,9 @@ path=(
   # core
   $path
 
+  # user
+  $HOME/.bin(N)
+
   # emacs
   $HOME/.emacs.d/bin(N)
   $XDG_CONFIG_HOME/emacs/bin(N)
